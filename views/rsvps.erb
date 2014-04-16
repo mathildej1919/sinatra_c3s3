@@ -6,18 +6,19 @@
 <body>
   <h1>Invites</h1>
 
-  <h2>Attendees (25)</h2>
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+  <h2>Attendees (<%= @acceptance_count %>)</h2>
+    <ul>
+    <% @acceptances.each do |yes| %>
+      <li><%= yes[0] %></li>
+    <% end %>
+    </ul>
 
-  <h2>Apologies (22)</h2>
+
+  <h2>Apologies (<%= @rejection_count %>)</h2>
   <ul>
-    <li></li>
-    <li></li>
-    <li></li>
+     <% @rejections.each do |no| %>
+      <li><%= no[0] %></li>
+    <% end %>
   </ul>
 
 
